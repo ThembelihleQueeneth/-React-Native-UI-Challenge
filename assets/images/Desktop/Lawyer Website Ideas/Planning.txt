@@ -1,0 +1,40 @@
+A.Phase 1: Research and Planning
+
+1.Goal
+
+To create a professional, trustworthy online presence for 
+a law firm where clients can learn about services, contact attorneys,
+and book consultations easily.
+
+2.Target Audience
+Clients seeking legal help (often stressed or confused).
+
+Businesses needing legal partners.
+
+Divorce and Marriege
+
+Road Accident Funds
+
+3.Information Architecture
+Home->About Us, Parctices Area
+Team Profiles
+Testimonials
+Blog
+Contact/Book 
+
+B. Phase 2: UI/UX Foundations
+Hick's law : Show only 2-3 main menu options
+Fitt's law: Make book consultation button large and easy to find.
+Jakob's law: Use familia layouts
+Aesthetic-Usability Effect: Clean typography, balances spacing and
+minimal distractions.
+
+Phase 3: Development Considerations
+Landuages/Frameword: React, typeScript, Redux Toolkit (for managing state)
+UI Framework: Tailwind
+Routing: React Router
+Form Handling: React Hook Form
+API Calls: Axios
+Authentication: JWT Auth
+Deployment: Vercel
+
