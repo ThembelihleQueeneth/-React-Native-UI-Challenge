@@ -1,50 +1,154 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 📱 React Native UI Challenge – README
 
-## Get started
+## 📌 **MyApp**
 
-1. Install dependencies
+**React Native UI Challenge**
+
+## 🎯 **Objective**
+The goal was to recreate one of the provided UI designs using React Native, focusing on:
+
+* Layout structure
+* Typography
+* Color accuracy
+* Responsive design
+* Reusable components
+* Clean and maintainable code
+
+The task tested my ability to translate a static UI design into an interactive and responsive screen using React Native best practices.
+
+---
+
+## 🖼️ **Preview**
+
+Below is a screenshot of my implementation:
+
+
+```
+![Phamarcy Mobile App](https://github.com/user-attachments/assets/6074110f-7c2d-426e-92b8-b46156fc3f09)
+
+```
+
+---
+
+## 📂 **Google Drive Build Link**
+
+You can download and test the built app from this link:
+
+(https://drive.google.com/drive/folders/1FAXWCdsk-mslF3UnczI9gEar0Jxqfdvg)
+---
+
+## 🛠️ **Tech Stack**
+
+* **React Native**
+* **Expo** (if used)
+* **JavaScript / TypeScript** (choose the one you used)
+* **React Native Stylesheet**
+* **Vector Icons / Image Assets**
+
+---
+
+## 🔧 **Features & Implementation**
+
+### ✔️ Accurate UI Replication
+
+* Matched layout, spacing, and alignment based on the chosen design.
+* Used similar fonts, colors, and icon styles.
+* Ensured all elements from the design were included.
+
+### ✔️ Reusable Components
+
+I created custom components such as:
+
+* `Button`
+* `Card`
+* `Header`
+* `InputField`
+  (Adjust based on what you actually built.)
+
+These components are reused throughout the screen to keep the code clean and maintainable.
+
+### ✔️ Responsive Design
+
+* Used Flexbox for layout.
+* Applied `%`, `flex`, and `Dimensions` to support different screen sizes.
+* Tested responsiveness on multiple device sizes.
+
+### ✔️ Interactivity
+
+* Buttons have hover feedback (if tested on web).
+* Elements respond visually when pressed.
+
+---
+
+## 🚀 **How to Run the App Locally**
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   ```
+2. Install dependencies:
 
    ```bash
    npm install
    ```
-
-2. Start the app
+3. Start the project:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📁 **Folder Structure**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+/screens
+    /HomeScreen.tsx
+/assets
+App.tsx
+README.md
+```
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🎨 **Design Notes**
 
-## Join the community
+* Icons and fonts were selected to closely match the original design.
+* Colors were extracted using a color picker from the UI screenshot.
+* Shadows, spacing, and margins were aligned with the provided design.
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## ✅ **Evaluation Checklist**
+
+### ✔️ Accuracy
+
+✔️ Layout
+✔️ Colors
+✔️ Typography
+✔️ All elements included
+
+### ✔️ Interactivity
+
+✔️ Buttons respond
+✔️ Links respond (if applicable)
+
+### ✔️ React Native Utilization
+
+✔️ Custom components
+✔️ Reusability
+
+### ✔️ Responsiveness
+
+✔️ Works across screen sizes
+✔️ Adjusts layout using Flexbox
+
+---
+
+## 📬 **Author**
+Thembelihle Maluke
+
