@@ -23,11 +23,9 @@ The task tested my ability to translate a static UI design into an interactive a
 
 Below is a screenshot of my implementation:
 
+![Phamarcy Mobile App](https://github.com/user-attachments/assets/07302e57-d94c-4300-8d35-dac04d043356)
 
-```
-![Phamarcy Mobile App](https://github.com/user-attachments/assets/6074110f-7c2d-426e-92b8-b46156fc3f09)
 
-```
 
 ---
 
