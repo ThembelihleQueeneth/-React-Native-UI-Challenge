@@ -60,7 +60,7 @@ export default function ProductScreen() {
 
         <Image
           source={require("../../assets/images/wafers-removebg-preview.png")}
-          style={{ width: 180, height: 230, alignSelf: "center", marginTop: 20 }}
+          style={{ width: 380, height: 230, alignSelf: "center", marginTop: 20 }}
           resizeMode="contain"
         />
       </View>
