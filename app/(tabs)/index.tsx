@@ -4,10 +4,26 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function ProductScreen() {
   const [quantity, setQuantity] = useState(2);
+  const [activeTab, setActiveTab] = useState("Relax");
+  const [activePill, setActivePill] = useState(30);
+  const [cartCount, setCartCount] = useState(3);
+
+  const getBasePrice = () => {
+    if (activePill === 30) return 25.50;
+    if (activePill === 60) return 45.00;
+    if (activePill === 90) return 60.00;
+    return 25.50;
+  };
+
+  const totalPrice = (getBasePrice() * quantity).toFixed(2);
+
+  // Dynamic styles based on tab
+  const activeBgColor = activeTab === "Relax" ? "#F8C629" : "#4A90E2";
+  const containerBgColor = activeTab === "Relax" ? "#D2E7F5" : "#1A2E44";
 
   return (
-    <View style={styles.container}>
-      <View style={styles.topSection}>
+    <View style={[styles.container, { backgroundColor: containerBgColor }]}>
+      <View style={[styles.topSection, { backgroundColor: activeBgColor }]}>
         <TouchableOpacity style={styles.backButton}>
           <Text style={{ fontSize: 20, fontWeight: "600" }}>{"<"}</Text>
         </TouchableOpacity>
@@ -18,7 +34,7 @@ export default function ProductScreen() {
             style={{ width: 50, height: 50 }}
             resizeMode="contain"
           />
-          <Text style={styles.logo}>xefag</Text>
+          <Text style={[styles.logo, { color: activeTab === "Sleep" ? "#fff" : "#000" }]}>xefag</Text>
         </View>
 
         {/* Profile + Cart */}
@@ -29,33 +45,41 @@ export default function ProductScreen() {
 
           <TouchableOpacity style={styles.iconCircleWhite}>
             <FontAwesome name="shopping-cart" size={20} color="black" />
-            <View style={styles.cartBadge}>
-              <Text style={styles.badgeText}>3</Text>
-            </View>
+            {cartCount > 0 && (
+              <View style={styles.cartBadge}>
+                <Text style={styles.badgeText}>{cartCount}</Text>
+              </View>
+            )}
           </TouchableOpacity>
         </View>
 
         <View style={styles.tabs}>
-          <TouchableOpacity style={styles.activeTabContainer}>
-            <FontAwesome name="smile-o" size={18} color="black" />
-            <Text style={styles.activeTab}>Relax</Text>
+          <TouchableOpacity
+            style={activeTab === "Relax" ? styles.activeTabContainer : styles.inactiveTabContainer}
+            onPress={() => setActiveTab("Relax")}
+          >
+            <FontAwesome name="smile-o" size={18} color={activeTab === "Sleep" ? "#fff" : "black"} />
+            <Text style={[activeTab === "Relax" ? styles.activeTab : styles.inactiveTab, { color: activeTab === "Sleep" ? "#fff" : "#000" }]}>Relax</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.inactiveTabContainer}>
-            <FontAwesome name="moon-o" size={18} color="black" />
-            <Text style={styles.inactiveTab}>Sleep</Text>
+          <TouchableOpacity
+            style={activeTab === "Sleep" ? styles.activeTabContainer : styles.inactiveTabContainer}
+            onPress={() => setActiveTab("Sleep")}
+          >
+            <FontAwesome name="moon-o" size={18} color={activeTab === "Sleep" ? "#fff" : "black"} />
+            <Text style={[activeTab === "Sleep" ? styles.activeTab : styles.inactiveTab, { color: activeTab === "Sleep" ? "#fff" : "#000" }]}>Sleep</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.pillContainer}>
-          <TouchableOpacity style={styles.pillActive}>
-            <Text style={styles.pillTextActive}>30</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.pill}>
-            <Text style={styles.pillText}>60</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.pill}>
-            <Text style={styles.pillText}>90</Text>
-          </TouchableOpacity>
+          {[30, 60, 90].map((pill) => (
+            <TouchableOpacity
+              key={pill}
+              style={activePill === pill ? styles.pillActive : styles.pill}
+              onPress={() => setActivePill(pill)}
+            >
+              <Text style={activePill === pill ? styles.pillTextActive : styles.pillText}>{pill}</Text>
+            </TouchableOpacity>
+          ))}
         </View>
 
         <Image
@@ -66,12 +90,14 @@ export default function ProductScreen() {
       </View>
 
       <View style={styles.bottomCard}>
-        <Text style={styles.title}>Relax 30</Text>
+        <Text style={styles.title}>{activeTab} {activePill}</Text>
         <Text style={styles.titleSecond}>Dissolvable Wafers</Text>
-        <Text style={styles.subtitle}>250 mg</Text>
+        <Text style={styles.subtitle}>
+          {activePill === 30 ? "250 mg" : activePill === 60 ? "500 mg" : "750 mg"}
+        </Text>
 
         <View style={styles.priceRow}>
-          <Text style={styles.price}>$25.50</Text>
+          <Text style={styles.price}>${totalPrice}</Text>
 
           <View style={styles.quantityRow}>
             <TouchableOpacity
@@ -92,9 +118,12 @@ export default function ProductScreen() {
           </View>
         </View>
 
-        <TouchableOpacity style={styles.buyButton}>
-          <FontAwesome name="shopping-bag" size={18} color="black" />
-          <Text style={styles.buyText}>Buy Now</Text>
+        <TouchableOpacity
+          style={[styles.buyButton, { backgroundColor: activeBgColor }]}
+          onPress={() => setCartCount(cartCount + quantity)}
+        >
+          <FontAwesome name="shopping-bag" size={18} color={activeTab === "Sleep" ? "#fff" : "black"} />
+          <Text style={[styles.buyText, { color: activeTab === "Sleep" ? "#fff" : "black" }]}>Buy Now</Text>
         </TouchableOpacity>
       </View>
     </View>
