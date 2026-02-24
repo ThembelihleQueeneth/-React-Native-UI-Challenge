@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import React, { useState } from "react";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function ProductScreen() {
   const [quantity, setQuantity] = useState(2);
@@ -59,7 +59,7 @@ export default function ProductScreen() {
         </View>
 
         <Image
-          source={require("../../assets/images/relax.jpeg")}
+          source={require("../../assets/images/wafers-removebg-preview.png")}
           style={{ width: 180, height: 230, alignSelf: "center", marginTop: 20 }}
           resizeMode="contain"
         />
