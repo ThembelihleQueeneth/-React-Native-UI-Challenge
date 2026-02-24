@@ -40,7 +40,7 @@ You can download and test the built app from this link:
 
 * **React Native**
 * **Expo** (if used)
-* ** TypeScrip t** 
+* **TypeScript** 
 * **React Native Stylesheet**
 * **Vector Icons / Image Assets**
 
