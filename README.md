@@ -34,6 +34,9 @@ You can download and test the built app from this link:
 (https://drive.google.com/drive/folders/1FAXWCdsk-mslF3UnczI9gEar0Jxqfdvg)
 ---
 
+## **APK Link**
+https://expo.dev/artifacts/eas/kKTZhLPvUBs6BfAib353ig.apk
+
 ##  **Tech Stack**
 
 * **React Native**
