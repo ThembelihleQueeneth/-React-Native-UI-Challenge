@@ -1,9 +1,7 @@
 
 #  React Native UI Challenge – README
 
-##  **MyApp**
-
-**React Native UI Challenge**
+##  **React Native UI Challenge**
 
 ##  **Objective**
 The goal was to recreate one of the provided UI designs using React Native, focusing on:
